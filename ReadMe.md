@@ -66,7 +66,7 @@ key_up("a")        key_down("a")
 
 1. Top 10 패턴 비교 - 가장 빈번한 패턴들의 분포를 보여줍니다.
 2. 누적 분포 그래프 - 전체 패턴의 집중도를 시각화합니다.
-3. 박스플롯 비교 - 봇과 사람의 패턴 빈도 분포를 통계적으로 비교합니다.
+3. 박스플롯 비교 - 봇과 사람의 패턴 빈도 분포를 통계적으로 비교합니다.  
    ![image](./output/image.png)  
    ![image](./output/top10_patterns_comparison.png)
    ![image](./output/cumulative_distribution.png)
