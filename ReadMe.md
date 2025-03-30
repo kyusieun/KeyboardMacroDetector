@@ -4,22 +4,18 @@
 
 본 프로젝트는 게임 내 자동 사냥 봇(Bot)을 탐지하기 위한 시스템 프로토타입입니다. 특히, 최근 봇들이 탐지를 회피하기 위해 사용하는 **저수준 키보드 입력(Key Down/Up)의 랜덤화(Randomization) 기법**에 대응하는 것을 목표로 합니다. 사용자의 키 입력 패턴을 분석하여 사람 플레이어와 봇을 구분하는 통계적 방법을 연구하고 C++로 구현합니다.
 
-이 프로젝트는 직무 지원을 위한 포트폴리오 목적으로 진행되었으며, ServerSide-AntiCheat 기술에 대한 이해와 C++ 프로그래밍 역량, 문제 해결 능력을 보여주고자 합니다.
-
-## 프로젝트 구조
-
-```cpp
-KeyboardMacroDetector/
-├── include/
-│   ├── InputEvent.h      // 이벤트 타입 및 구조체 정의
-│   ├── PatternAnalyzer.h // 패턴 분석 클래스 선언
-│   └── Constants.h       // 상수 및 설정값 정의
-├── src/
-│   ├── PatternAnalyzer.cpp // 패턴 분석 구현
-│   └── main.cpp           // 메인 실행 파일
-└── python/
-    └── visualizer.py      // 데이터 시각화 스크립트
+**저수준 키보드 입력(Key Down/Up)의 랜덤화(Randomization) 기법**의 예시
+```python
+key_down("alt")    key_down("alt")
+key_up("alt")      key_up("alt")
+key_down("alt")    key_down("alt")
+key_up("alt")      key_up("alt")
+key_down("a")      key_up("a")
+key_up("a")        key_down("a")
 ```
+둘 다 같은 press("alt") press("alt") press("a") 이지만 맨 아래 key_up("a")의 순서가 바뀌어 입력 패턴 검사를 우회할 수 있다.
+
+이 프로젝트는 직무 지원을 위한 포트폴리오 목적으로 진행되었으며, ServerSide-AntiCheat 기술에 대한 이해와 C++ 프로그래밍 역량, 문제 해결 능력을 보여주고자 합니다.
 
 ## 주요 기능 (Features)
 
